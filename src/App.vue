@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="app" :class="$style.app">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-};
+  export default {
+    name: 'App',
+  };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="postcss" module>
+  /* @custom-media --small-viewport (max-width: 426px); */
+
+  .app {
+    background-color: #ccc;
+  }
+  @media (--small-viewport) {
+    .app {
+      background-color: red;
+    }
+  }
 </style>

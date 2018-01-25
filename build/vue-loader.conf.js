@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use strict'
 const utils = require('./utils')
 const config = require('../config')
@@ -9,7 +11,8 @@ const sourceMapEnabled = isProduction
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
-    extract: isProduction
+    extract: isProduction,
+    usePostCSS: true, // NOTE This activates PostCSS support on the template
   }),
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
@@ -18,5 +21,6 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
+  },
+  // TODO ??? Is 'postcss' and all the `require`s here?
 }

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -34,7 +36,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
+      // '@': resolve('src'),
+      components: resolve('src/components'),
+      pages: resolve('src/pages'),
+      router: resolve('src/router'),
+      store: resolve('src/store'),
+      // NOTE Add more aliases here, e.g. `api: resolve('src/api')`
     }
   },
   module: {

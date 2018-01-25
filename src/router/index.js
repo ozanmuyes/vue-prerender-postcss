@@ -1,15 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+
+import routes from './routes';
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
-    },
-  ],
+  // WARN Do NOT change this as its is directly affects
+  //      prerendering process (PhantomJS related).
+  //      See https://router.vuejs.org/en/essentials/history-mode.html#example-server-configurations
+  mode: 'history',
+  routes,
 });
