@@ -23,20 +23,18 @@
   }
 
   .verticallyCentered {
-    /**/
-    /*color: red;*/
+    /* color: red; */
     color: rebeccapurple;
-    ali: 1px;
+    /* ali: 1px; */
   }
 
   .horizontallyCentered {
-    /**/
   }
 
   .container {
     /* NOTE Here, we writing composings first */
-    composes: verticallyCentered;
-    composes: horizontallyCentered;
+    /* composes: verticallyCentered;
+    composes: horizontallyCentered; */
 
     padding: 2rem;
   }

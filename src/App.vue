@@ -1,5 +1,6 @@
 <template>
   <div id="app" :class="$style.app">
+    <div class="foo"></div>
     <router-view></router-view>
   </div>
 </template>
@@ -15,6 +16,14 @@
 
   .app {
     background-color: #ccc;
+    display: flex;
+
+    &.foo {
+      display: block;
+      width: 80px;
+      height: 60px;
+      background-color: yellow;
+    }
   }
   @media (--small-viewport) {
     .app {
